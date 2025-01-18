@@ -1,0 +1,8 @@
+*
+!.gitignore
+!README*
+!*.c
+!*.h
+!*.cpp
+!*.hpp
+!*.cs
