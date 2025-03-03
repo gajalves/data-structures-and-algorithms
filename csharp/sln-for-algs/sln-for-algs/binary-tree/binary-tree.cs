@@ -123,6 +123,56 @@ class BinaryTree
             result.Add(node.Data);
         }
     }
+
+    public bool DFS(int data)
+    {
+        return DFSRecursive(Root, data);
+    }
+
+    private bool DFSRecursive(Node current, int data)
+    {
+        if (current == null)
+        {
+            return false;
+        }
+
+        if (data == current.Data)
+        {
+            return true;
+        }
+
+        if (DFSRecursive(current.Left, data))
+            return true;
+
+        if (DFSRecursive(current.Right, data))
+            return true;
+
+        return false;
+    }
+
+    public bool BFS(int target)
+    {
+        if (Root == null)
+            return false;
+
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(Root);
+
+        while (queue.Count > 0)
+        {
+            var node = queue.Dequeue();
+            if (node.Data == target)
+                return true;
+
+            if (node.Left != null)
+                queue.Enqueue(node.Left);
+
+            if (node.Right != null)
+                queue.Enqueue(node.Right);
+        }
+
+        return false;
+    }
 }
 
 internal static class binary_tree
@@ -158,6 +208,13 @@ internal static class binary_tree
 
         //[2,4,3,6,8,7,5]
         tree.PrintPostorderTraversal();
+
+
+        Console.WriteLine($"dfs 2: {tree.DFS(2)}");
+        Console.WriteLine($"dfs 15: {tree.DFS(15)}");
+
+        Console.WriteLine($"bfs 2: {tree.BFS(2)}");
+        Console.WriteLine($"bfs 15: {tree.BFS(15)}");
     }
 }
 

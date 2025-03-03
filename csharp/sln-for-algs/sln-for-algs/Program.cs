@@ -7,6 +7,7 @@ using sln_for_algs.binary_tree;
 using sln_for_algs.bitwise;
 using sln_for_algs.linked_lists;
 using sln_for_algs.sorting;
+using sln_for_algs.stack;
 
 //Console.WriteLine(reverse_words_in_a_string_iii.ReverseWords("coca cola"));
 //Console.WriteLine("[{0}]", string.Join(", ", two_sum.TwoSum([-3, 3, 4, 90], 0)));
@@ -38,9 +39,13 @@ using sln_for_algs.sorting;
 */
 
 //mergesort.Main();
-
 //Console.WriteLine(missing_number.MissingNumber([3, 0, 1]));
-
 //Console.WriteLine(number_of_steps_to_reduce_a_number_to_zero.NumberOfStepsBitwise(14));
+//binary_tree.main();
+//construct_binary_tree_from_inorder_and_postorder_traversal.run();
 
-binary_tree.main();
+//stack_arr.main();
+//stack_linked_list.main();
+
+//min_stack.Main();
+valid_parentheses.main();
