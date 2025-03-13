@@ -5,7 +5,7 @@ internal static class valid_parentheses
     static bool isValid(string s)
     {
         var stack = new Stack<char>();
-        var dic = new Dictionary<char, char>()
+        var dic = new Dictionary<char, char>()        
         {
             { '(', ')' },
             { '[', ']' },
